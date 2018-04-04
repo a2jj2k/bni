@@ -1,0 +1,6 @@
+#!/bin/bash
+#echo "Welcome to the world of Linux"
+myname="Jose Arun2"
+echo $myname
+declare -r enfield=6946
+echo $((enfield+1))

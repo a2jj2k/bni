@@ -1,0 +1,82 @@
+1.	Write command to show today’s date and time in the below given format 
+
+i. DD/MM/YYYY EG: 30/01/2013
+date +"%d/%m/%Y"
+	ii. DAY, MONTH DATE EG: Wednesday, January 30
+date +"%A,%B %d"
+	iii. DAY DD/MM/YY EG: Wednesday 01/30/13
+date +"%A %D"
+	iv. HH:MM:SS EG: 10:30:20
+date +"%T"
+	v. HH:MM AM/PM EG: 10:30 AM
+	date +"%I:%M %p"
+2.	Display the calendar of current month
+cal
+3.	Get the calendar for the month March in the year 2022
+cal -m march 2022
+4.	Create three directories letters, reports and assignments under your home directory. 
+
+mkdir {letters,reports,assignments}
+
+a.	Move to the directory letters. 
+cd letters
+b.	Create two directories friendly and formal under the directory letters. 
+mkdir {friendly,formal}
+c.	Move to directory reports. Using single command. 
+cd ../reports
+d.	Create a directory UNIX under assignments without moving from reports. 
+mkdir ../assignments/UNIX 
+e.	Move to UNIX and check your current directory. 
+cd ../assignments/UNIX
+f.	Create a file hw4 with a brief report on man, who, whoami, date. 
+touch hw4.txt
+g.	Print the content of Hw4 from your home directory. 
+cd ~
+cat ../assignments/UNIX/hw4.txt
+h.	Make a copy of hw4 and store it under the same directory where hw4 is stored.
+	cat ../assignments/UNIX/hw4.tx > hw4_copy.txt
+i.	Use ls command to list the hierarchy in various formats. 
+ls
+ls –la
+ls –ltr
+ls –a
+ls –lh
+ls –l
+ls - -l
+ls –F
+ls –r
+ls –R
+ls –ls
+
+j.	Remove Hw4. 
+rm –rf /assignments/UNIX/hw4_copy.txt 
+k.	Remove all created folder recursively from your home directory. 	
+
+5.	Using cat command write a single command to copy file1 to file2 
+	cat <file1> > <file2>
+6.	Using head command copy lines 1 to 20 of file1 to file2. 
+head -20 <file1> > <file2>
+7.	Demonstrate addition, substraction multiplication and division using ‘expr’
+
+echo "enter first number"
+read num1
+echo "enter second number"
+read num2
+echo $(expr $num1 + $num2)
+echo $(expr $num1 - $num2)
+echo $(expr $num1 \* $num2)
+              echo $(expr $num1 / $num2)
+
+8.	Display first 3 lines in the /etc/passwd file.
+head -3 /etc/passwd
+9.	Create a hidden file and list the file name using the ls command
+	touch .royalenfield.txt
+	ls -la
+10.	Create a text file, give some text to the file and use the filter commands grep,wc & cut with the same file.
+
+grep  “royal” royalenfield.txt
+wc -c 1-6 royalenfield.txt
+wc royalenfield.txt
+11.	Display last two directory or file in the home directory.
+
+ls -lt | head -3
